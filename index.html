@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    
+      <meta charset="UTF-8">
+   
+      
+  <link rel="stylesheet" href="./resource/styles.css">
+  
+      
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+
+   <body>
+      
+      <div class="form-body">
+         <div class="row">
+            <div class="form-holder">
+               <div class="form-content">
+                  <div class="form-items">
+                     <h3>Register Today</h3>
+
+                     <div class="col-md-8">
+                        <input class="form-control" style="width:20em;" id="fname"type="text" name="name" placeholder="First Name" >
+                     </div>
+                     <div class="col-md-12">
+                        <input class="form-control" style="width:20em;" id="lname"type="text" name="name" placeholder="Last Name" >
+                     </div>
+                     <div class="col-md-12 mt-3" style="padding-top:1em;">
+                        <label class="mb-3 mr-1" for="gender">Gender: </label>
+                        <input type="radio" class="btn-check" name="gender" id="g1"  autocomplete="off" >
+                        <label class="btn btn-sm btn-outline-secondary" for="male">Male</label>
+                        <input type="radio" class="btn-check" name="gender" id="g2"  autocomplete="off" >
+                        <label class="btn btn-sm btn-outline-secondary" for="female">Female</label>
+                     </div>
+                     <div class="col-md-12" style="padding-top:1em;">
+                        <label for="dob">Birthday:</label> 
+                        <input class="form-control" id="dob" type="date" >
+                     </div>
+                     <div class="col-md-12">
+                        <select class="form-select mt-3" style="width:20em;" >
+                           <option selected disabled value="">Employed</option>
+                           <option value="yes">Yes</option>
+                           <option value="no">No</option>
+                        </select>
+                     </div>
+                     <div class="form-button mt-3" style="padding-top: 1em;">
+                        <button onclick="validate()" class="fourth" type="submit" >Register</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="./resource/script.js">
+      
+      </script>
+   </body>
+   
+   
+</html>
