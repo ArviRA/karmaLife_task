@@ -50,11 +50,19 @@ function validate()
     }
     if (status == "true")
     {
-    fetch("https://127.0.0.1:5000/",{headers:"GET"}).then(response => {console.log(response)})
+        fetch('http://127.0.0.1:5000/insertDATA', {
+            method: 'POST',
+            mode:'cors',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(send_dict),
+          }).then(response => {return response.json()})
+          .then(response => {console.log(response)})
     }
 }
 function notVal(data)
 {   status = false;
     alert("All fields are mandatory\nFill the "+data+" field");
-    console.log(status)
+    //console.log(status)
 }
