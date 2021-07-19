@@ -1,6 +1,7 @@
-var status = true;
+var status;
 function validate()
 {   var gender;
+    status = true;
     var send_dict = {}
     var Emp;
     var dob = document.getElementById("dob").value;
@@ -47,9 +48,9 @@ function validate()
     else{
       send_dict["employed"] = employeStatus;  
     }
-    if(status == true)
+    if (status == "true")
     {
-    console.log(JSON.stringify(send_dict))
+    fetch("https://127.0.0.1:5000/",{headers:"GET"}).then(response => {console.log(response)})
     }
 }
 function notVal(data)
