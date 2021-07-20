@@ -2,7 +2,9 @@ from flask import Flask,jsonify,request,render_template
 from flask_cors import CORS
 import json
 import pymongo
+import pandas as pd
 from pymongo import MongoClient
+
 myclient = MongoClient("mongodb+srv://MasterUser:thegoodlife@cluster0.xrlut.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 mydb = myclient["KarmaLIFE"]
 collection_db = mydb["collection1"]
@@ -13,6 +15,34 @@ CORS(app)
 @app.route("/")
 def homepage():
    return render_template("index.html")
+
+
+@app.route("/display",methods=["GET"])
+def displayTable():
+   try:
+      temp_data = collection_db.find()
+      print(temp_data)
+      name = []
+      dob = []
+      gender =[]
+      emp = []
+      df = pd.DataFrame()
+      for x in temp_data:
+            name.append(x["fname"]+x["lname"])
+            dob.append(x["dob"])
+            gender.append(x["gender"])
+            emp.append(x["employed"])
+      df["Name"] = name
+      df["DOB"] = dob
+      df["Gender"] = gender
+      df["Employed"] =emp
+      #df = df.style.set_table_styles({'A': [{'selector': '','props': [('color', 'red')]}],'B': [{'selector': 'td','props': 'color: blue;'}]}, overwrite=False)
+      tables=[df.to_html(classes='data', header="true")]
+      print(tables[0])
+
+      return render_template('display.html',tables=[df.to_html(classes=None, header="true",justify="center", border=None,index=False,table_id="tablecontent")])
+   except:
+      pass
 
 
 @app.route("/insertDATA",methods=["GET","POST"])
