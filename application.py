@@ -29,7 +29,7 @@ def displayTable():
       emp = []
       df = pd.DataFrame()
       for x in temp_data:
-            name.append(x["fname"]+x["lname"])
+            name.append(x["fname"]+" "+x["lname"])
             dob.append(x["dob"])
             gender.append(x["gender"])
             emp.append(x["employed"])

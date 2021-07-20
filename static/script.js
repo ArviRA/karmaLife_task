@@ -58,8 +58,47 @@ function validate()
             },
             body: JSON.stringify(send_dict),
           }).then(response => {return response.json()})
-          .then(response => {console.log(response)})
+          .then(response => {
+              if (response.status == '200')
+              {
+                  document.getElementById("fname").value= ""
+                  document.getElementById("lname").value= ""
+                  document.getElementById("g1").checked= false
+                  document.getElementById("g2").checked= false
+                  document.getElementById("dob").value= ""
+                  document.getElementById("dropDown").value= ""
+                toast(1);
+              }
+              else{
+                  toast(0);
+              }
+          })
+          .catch(Error => {toast(0)})
     }
+}
+function toast(data)
+{   
+    if (data == 1)
+    {
+    var x = document.getElementById("snackbar");
+
+    // Add the "show" class to DIV
+    x.className = "show";
+  
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    }
+    else{
+        document.getElementById("snackbar").innerHTML = "Something went wrong Try again"
+        var x = document.getElementById("snackbar");
+
+    // Add the "show" class to DIV
+    x.className = "show";
+  
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    }
+
 }
 function notVal(data)
 {   status = false;
