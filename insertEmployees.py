@@ -4,7 +4,7 @@ from pymongo import MongoClient
 
 myclient = MongoClient("mongodb+srv://MasterUser:thegoodlife@cluster0.xrlut.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 mydb = myclient["KarmaLIFE"]
-collection_db = mydb["collection1"]
+collection_db = mydb["Employee_Collection"]
 
 
 def update_db(data_dict):
