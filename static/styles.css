@@ -1,192 +1,258 @@
-         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
-         *, body {
-         font-family: 'Poppins', sans-serif;
-         font-weight: 400;
-         -webkit-font-smoothing: antialiased;
-         text-rendering: optimizeLegibility;
-         -moz-osx-font-smoothing: grayscale;
-         }
-         html, body {
-         height: 100%;
-         background-color: #152733;
-         overflow: hidden;
-         }
-         .form-holder {
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         align-items: center;
-         text-align: center;
-         min-height: 100vh;
-         }
-         .form-holder .form-content {
-         position: relative;
-         text-align: center;
-         display: -webkit-box;
-         display: -moz-box;
-         display: -ms-flexbox;
-         display: -webkit-flex;
-         display: flex;
-         -webkit-justify-content: center;
-         justify-content: center;
-         -webkit-align-items: center;
-         align-items: center;
-         padding: 60px;
-         }
-         .form-content .form-items {
-         border: 3px solid #fff;
-         padding: 40px;
-         display: inline-block;
-         width: 100%;
-         min-width: 540px;
-         -webkit-border-radius: 10px;
-         -moz-border-radius: 10px;
-         border-radius: 10px;
-         text-align: left;
-         -webkit-transition: all 0.4s ease;
-         transition: all 0.4s ease;
-         }
-         .form-content h3 {
-         color: #fff;
-         text-align: left;
-         font-size: 28px;
-         font-weight: 600;
-         margin-bottom: 5px;
-         }
-         .form-content h3.form-title {
-         margin-bottom: 30px;
-         }
-         .form-content p {
-         color: #fff;
-         text-align: left;
-         font-size: 17px;
-         font-weight: 300;
-         line-height: 20px;
-         margin-bottom: 30px;
-         }
-         .form-content label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
-         color: #fff;
-         }
-         .form-content input[type=text], .form-content input[type=password], .form-content input[type=email], .form-content select {
-         width: 100%;
-         padding: 9px 20px;
-         text-align: left;
-         border: 0;
-         outline: 0;
-         border-radius: 6px;
-         background-color: #fff;
-         font-size: 15px;
-         font-weight: 300;
-         color: #8D8D8D;
-         -webkit-transition: all 0.3s ease;
-         transition: all 0.3s ease;
-         margin-top: 16px;
-         }
-         .btn-primary{
-         background-color: #6C757D;
-         outline: none;
-         border: 0px;
-         box-shadow: none;
-         }
-         .btn-primary:hover, .btn-primary:focus, .btn-primary:active{
-         background-color: #495056;
-         outline: none !important;
-         border: none !important;
-         box-shadow: none;
-         }
-         .form-content textarea {
-         position: static !important;
-         width: 100%;
-         padding: 8px 20px;
-         border-radius: 6px;
-         text-align: left;
-         background-color: #fff;
-         border: 0;
-         font-size: 15px;
-         font-weight: 300;
-         color: #8D8D8D;
-         outline: none;
-         resize: none;
-         height: 120px;
-         -webkit-transition: none;
-         transition: none;
-         margin-bottom: 14px;
-         }
-         .form-content textarea:hover, .form-content textarea:focus {
-         border: 0;
-         background-color: #ebeff8;
-         color: #8D8D8D;
-         }
-         .mv-up{
-         margin-top: -9px !important;
-         margin-bottom: 8px !important;
-         }
-         .invalid-feedback{
-         color: #ff606e;
-         }
-         .valid-feedback{
-         color: #2acc80;
-         }
-         .fourth {
-             background-color: teal;
-             border-radius: 7px;
-             border-width: 1px;
-             color:white;
-             font-size: larger;
-          }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+*,
+body {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+}
 
-          #snackbar {
-            visibility: hidden; /* Hidden by default. Visible on click */
-            min-width: 250px; /* Set a default minimum width */
-            margin-left: -125px; /* Divide value of min-width by 2 */
-            background-color: #333; /* Black background color */
-            color: #fff; /* White text color */
-            text-align: center; /* Centered text */
-            border-radius: 2px; /* Rounded borders */
-            padding: 16px; /* Padding */
-            position: fixed; /* Sit on top of the screen */
-            z-index: 1; /* Add a z-index if needed */
-            left: 50%; /* Center the snackbar */
-            bottom: 30px; /* 30px from the bottom */
-          }
-          
-          /* Show the snackbar when clicking on a button (class added with JavaScript) */
-          #snackbar.show {
-            visibility: visible; /* Show the snackbar */
-            /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+html,
+body {
+	height: 100%;
+	background-color: #152733;
+	overflow: hidden;
+}
+
+.form-holder {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 100vh;
+}
+
+.form-holder .form-content {
+	position: relative;
+	text-align: center;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	padding: 60px;
+}
+
+.form-content .form-items {
+	border: 3px solid #fff;
+	padding: 40px;
+	display: inline-block;
+	width: 100%;
+	min-width: 540px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	text-align: left;
+	-webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.form-content h3 {
+	color: #fff;
+	text-align: left;
+	font-size: 28px;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.form-content h3.form-title {
+	margin-bottom: 30px;
+}
+
+.form-content p {
+	color: #fff;
+	text-align: left;
+	font-size: 17px;
+	font-weight: 300;
+	line-height: 20px;
+	margin-bottom: 30px;
+}
+
+.form-content label,
+.was-validated .form-check-input:invalid~.form-check-label,
+.was-validated .form-check-input:valid~.form-check-label {
+	color: #fff;
+}
+
+.form-content input[type=text],
+.form-content input[type=password],
+.form-content input[type=email],
+.form-content select {
+	width: 100%;
+	padding: 9px 20px;
+	text-align: left;
+	border: 0;
+	outline: 0;
+	border-radius: 6px;
+	background-color: #fff;
+	font-size: 15px;
+	font-weight: 300;
+	color: #8D8D8D;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	margin-top: 16px;
+}
+
+.btn-primary {
+	background-color: #6C757D;
+	outline: none;
+	border: 0px;
+	box-shadow: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+	background-color: #495056;
+	outline: none !important;
+	border: none !important;
+	box-shadow: none;
+}
+
+.form-content textarea {
+	position: static !important;
+	width: 100%;
+	padding: 8px 20px;
+	border-radius: 6px;
+	text-align: left;
+	background-color: #fff;
+	border: 0;
+	font-size: 15px;
+	font-weight: 300;
+	color: #8D8D8D;
+	outline: none;
+	resize: none;
+	height: 120px;
+	-webkit-transition: none;
+	transition: none;
+	margin-bottom: 14px;
+}
+
+.form-content textarea:hover,
+.form-content textarea:focus {
+	border: 0;
+	background-color: #ebeff8;
+	color: #8D8D8D;
+}
+
+.mv-up {
+	margin-top: -9px !important;
+	margin-bottom: 8px !important;
+}
+
+.invalid-feedback {
+	color: #ff606e;
+}
+
+.valid-feedback {
+	color: #2acc80;
+}
+
+.fourth {
+	background-color: teal;
+	border-radius: 7px;
+	border-width: 1px;
+	color: white;
+	font-size: larger;
+}
+
+#snackbar {
+	visibility: hidden;
+	/* Hidden by default. Visible on click */
+	min-width: 250px;
+	/* Set a default minimum width */
+	margin-left: -125px;
+	/* Divide value of min-width by 2 */
+	background-color: #333;
+	/* Black background color */
+	color: #fff;
+	/* White text color */
+	text-align: center;
+	/* Centered text */
+	border-radius: 2px;
+	/* Rounded borders */
+	padding: 16px;
+	/* Padding */
+	position: fixed;
+	/* Sit on top of the screen */
+	z-index: 1;
+	/* Add a z-index if needed */
+	left: 50%;
+	/* Center the snackbar */
+	bottom: 30px;
+	/* 30px from the bottom */
+}
+
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+
+#snackbar.show {
+	visibility: visible;
+	/* Show the snackbar */
+	/* Add animation: Take 0.5 seconds to fade in and out the snackbar.
             However, delay the fade out process for 2.5 seconds */
-            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-            animation: fadein 0.5s, fadeout 0.5s 2.5s;
-          }
-          
-          /* Animations to fade the snackbar in and out */
-          @-webkit-keyframes fadein {
-            from {bottom: 0; opacity: 0;}
-            to {bottom: 30px; opacity: 1;}
-          }
-          
-          @keyframes fadein {
-            from {bottom: 0; opacity: 0;}
-            to {bottom: 30px; opacity: 1;}
-          }
-          
-          @-webkit-keyframes fadeout {
-            from {bottom: 30px; opacity: 1;}
-            to {bottom: 0; opacity: 0;}
-          }
-          
-          @keyframes fadeout {
-            from {bottom: 30px; opacity: 1;}
-            to {bottom: 0; opacity: 0;}
-          }
-          #button_id{
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
 
-            border-radius: 5px;
-            border-color: transparent;
-            padding: 5px;
-            position: absolute;
-            right: 5%;
-            top: 5%;
-              }
-          
-      
+
+/* Animations to fade the snackbar in and out */
+
+@-webkit-keyframes fadein {
+	from {
+		bottom: 0;
+		opacity: 0;
+	}
+	to {
+		bottom: 30px;
+		opacity: 1;
+	}
+}
+
+@keyframes fadein {
+	from {
+		bottom: 0;
+		opacity: 0;
+	}
+	to {
+		bottom: 30px;
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeout {
+	from {
+		bottom: 30px;
+		opacity: 1;
+	}
+	to {
+		bottom: 0;
+		opacity: 0;
+	}
+}
+
+@keyframes fadeout {
+	from {
+		bottom: 30px;
+		opacity: 1;
+	}
+	to {
+		bottom: 0;
+		opacity: 0;
+	}
+}
+
+#button_id {
+	border-radius: 5px;
+	border-color: transparent;
+	padding: 5px;
+	position: absolute;
+	right: 5%;
+	top: 5%;
+}

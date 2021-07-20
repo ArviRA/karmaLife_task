@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>KarmaLife</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='display_page.css') }}">
-</head>
-<style>
-    
-</style>
-<body>
-    <form action="/" method="GET">
-        <button type="submit">Fill Detais</button>
-        </form>
-<section>
-    <h1 style="font-weight: bolder;">Employee Details</h1>
-    <input type="text" placeholder="Enter the Name" onkeyup="filter_table()" id="emp_name">
-
-<div class="tbl-header">
-{% for table in tables %}
+   <head>
+      <meta charset="UTF-8">
+      <title>KarmaLife</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='display_page.css') }}">
+   </head>
+   <style>
+   </style>
+   <body>
+      <form action="/" method="GET">
+         <button type="submit">Fill Detais</button>
+      </form>
+      <section>
+         <h1 style="font-weight: bolder;">Employee Details</h1>
+         <input type="text" placeholder="Enter the Name" onkeyup="filter_table()" id="emp_name">
+         <div class="tbl-header">
+            {% for table in tables %}
             {{ table|safe }}
-{% endfor %}
- </div> 
- </section>
-</body>
-<script src="{{ url_for('static', filename='script.js') }}">
-</script>
+            {% endfor %}
+         </div>
+      </section>
+   </body>
+   <script src="{{ url_for('static', filename='script.js') }}"></script>
 </html>

@@ -4,19 +4,14 @@
       <title>KarmaLife</title>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
       <meta charset="UTF-8">
-   
-      
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-  
-      
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Document</title>
    </head>
-
    <body>
       <form action="/viewEmployees" method="GET">
-      <button  id="button_id" type="submit">View Table</button>
+         <button  id="button_id" type="submit">View Table</button>
       </form>
       <div class="form-body">
          <div class="row">
@@ -24,7 +19,6 @@
                <div class="form-content">
                   <div class="form-items">
                      <h3>Register Today</h3>
-
                      <div class="col-md-8">
                         <input class="form-control" style="width:20em;" id="fname"type="text" name="name" placeholder="First Name" >
                      </div>
@@ -58,11 +52,6 @@
          </div>
          <div id="snackbar">Sucessfully Registered</div>
       </div>
-      
    </body>
-   <script src="{{ url_for('static', filename='script.js') }}">
-      
-   </script>
-   
-   
+   <script src="{{ url_for('static', filename='script.js') }}"></script>
 </html>
