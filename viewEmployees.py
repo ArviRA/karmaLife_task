@@ -8,6 +8,9 @@ mydb = myclient["KarmaLIFE"]
 collection_db = mydb["collection1"]
 
 def get_data():
+    '''
+    This Function is used to retrive the data from the Mongo DB Collection
+    '''
     temp_data = collection_db.find()
     print(temp_data)
     name = []
