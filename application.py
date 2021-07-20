@@ -4,6 +4,7 @@ import json
 import pymongo
 import pandas as pd
 from pymongo import MongoClient
+from IPython.display import HTML
 
 myclient = MongoClient("mongodb+srv://MasterUser:thegoodlife@cluster0.xrlut.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 mydb = myclient["KarmaLIFE"]
@@ -37,10 +38,10 @@ def displayTable():
       df["Gender"] = gender
       df["Employed"] =emp
       #df = df.style.set_table_styles({'A': [{'selector': '','props': [('color', 'red')]}],'B': [{'selector': 'td','props': 'color: blue;'}]}, overwrite=False)
-      tables=[df.to_html(classes='data', header="true")]
-      print(tables[0])
+      tables= HTML(df.to_html(classes='data', header="true"))
+      print(tables)
 
-      return render_template('display.html',tables=[df.to_html(classes=None, header="true",justify="center", border=None,index=False,table_id="tablecontent")])
+      return render_template('display.html',tables=[df.to_html(classes=None,border=0,header="true",justify="center",index=False,table_id="tablecontent")])
    except:
       pass
 
