@@ -179,6 +179,14 @@
             from {bottom: 30px; opacity: 1;}
             to {bottom: 0; opacity: 0;}
           }
-          
+          #button_id{
+
+            border-radius: 5px;
+            border-color: transparent;
+            padding: 5px;
+            position: absolute;
+            right: 5%;
+            top: 5%;
+              }
           
       
