@@ -9,3 +9,6 @@ post = {'id':1,'fname':'Shaki','lname':'C'}
 
 temp.insert_one(post)
  
+
+
+ 
